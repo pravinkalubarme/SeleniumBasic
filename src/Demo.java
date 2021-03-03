@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Demo {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		String basePath = System.getProperty("user.dir");
 		System.out.println(basePath);
 		String driverPath=basePath+"/Driver/chromedriver.exe";
@@ -12,11 +12,7 @@ public class Demo {
 		WebDriver driver = new ChromeDriver();
        	driver.manage().window().maximize();
      	driver.get("https://www.google.com/");
-     	try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-		}
+     	Thread.sleep(1000);
      	driver.close();    	
 	}
 }

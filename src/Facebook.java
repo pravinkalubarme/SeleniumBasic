@@ -19,7 +19,5 @@ public class Facebook {
 		System.out.println("Got Checkbox element");
 		System.out.println("Searching notes element");
 		WebElement notes = driver.findElement(By.xpath("//span[contains(text(), 'Notes')]"));
-		System.out.println("Got notes element");
-		System.out.println(notes.getText());
-	}
+		}
 }
